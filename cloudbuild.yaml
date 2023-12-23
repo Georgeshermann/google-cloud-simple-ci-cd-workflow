@@ -12,3 +12,5 @@ steps:
   - --trigger-http
   - --allow-unauthenticated
   - --runtime=python311
+options:
+  logging: CLOUD_LOGGING_ONLY
