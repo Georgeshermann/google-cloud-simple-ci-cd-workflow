@@ -10,4 +10,5 @@ steps:
   - --source=myfunction/
   - --entry-point=hello_linkedin
   - --trigger-http
+  - --allow-unauthenticated
   - --runtime=python311
