@@ -5,7 +5,9 @@ steps:
   - functions
   - deploy
   - hello_linkedin
+  - --gen2
   - --region=europe-west1
-  - --source=./myfunction
+  - --source=myfunction/
+  - --entry-point=hello_linkedin
   - --trigger-http
-  - --runtime=PYTHON311
+  - --runtime=python311
