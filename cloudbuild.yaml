@@ -1,14 +1,14 @@
 steps:
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'  
+  entrypoint: 'bash'
   args:
-  - gcloud
-  - functions
-  - deploy
-  - hello_linkedin
-  - --gen2
-  - --region=europe-west1
-  - --source=myfunction/
-  - --entry-point=hello_linkedin
-  - --trigger-http
-  - --allow-unauthenticated
-  - --runtime=python311
+    - '-c'  
+    - |
+      gcloud functions deploy hello_linkedin 
+        --gen2
+        --region=europe-west1
+        --source=myfunction/
+        --entry-point=hello_linkedin
+        --trigger-http
+        --allow-unauthenticated
+        --runtime=python311
