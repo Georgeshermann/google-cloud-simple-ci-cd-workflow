@@ -9,6 +9,6 @@ steps:
         --region=europe-west1
         --source=myfunction/
         --entry-point=hello_linkedin
-        --trigger-http
         --allow-unauthenticated
         --runtime=python311
+        --trigger-http
